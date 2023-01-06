@@ -1,0 +1,26 @@
+nav.navbar.fixed-top.navbar-expand-xl.navbar-dark#topmenu
+    .container
+        a.d-flex.align-items-center.mb-2.text-decoration-none(href='/')
+            img(alt="logo" src='assets/logo.svg' width='248' style="margin-left:15px;").logo
+        button.text-white.navbar-toggler(data-bs-toggle='offcanvas', data-bs-target='#offcanvasNavbar', aria-controls='offcanvasNavbar').my-toggler
+            span.navbar-toggler-icon.toggler
+        #offcanvasNavbar.offcanvas.offcanvas-end.menu(tabindex='-1', aria-labelledby='offcanvasNavbarLabel')
+            .offcanvas-header
+                h5#offcanvasNavbarLabel.offcanvas-title
+                button.btn-close(type='button', data-bs-dismiss='offcanvas', aria-label='Close').btn-close-white
+            .offcanvas-body
+                ul.navbar-nav.justify-content-end.flex-grow-1.pe-3(itemscope itemtype="http://schema.org/SiteNavigationElement")
+                    li.nav-item
+                        a.nav-link.px-2(itemprop="url" href='/investor' class=`${investor}`).menu-link инвесторам
+                    li.nav-item
+                        a.nav-link.px-2(itemprop="url" href='/lender' class=`${lender}`).menu-link заемщикам
+                    li.nav-item
+                        a.nav-link.px-2(itemprop="url" href='/about' class=`${about}`).menu-link о платформе
+                    li.nav-item
+                        a.nav-link.px-2(itemprop="url" href='/docs' class=`${docs}`).menu-link документы
+                    li.nav-item
+                        a.nav-link.px-2(itemprop="url" href='/faq' class=`${faq}`).menu-link вопросы
+                    li.nav-item
+                        a.nav-link.px-2(itemprop="url" href='/us' class=`${us}`).menu-link о нас
+                    li.nav-item
+                        a.nav-link.px-2(itemprop="url" href="/login").menu-link личный кабинет

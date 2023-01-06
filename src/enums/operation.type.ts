@@ -1,0 +1,17 @@
+export enum OperationType {
+  INVEST = 'Совершено инвестирование',
+  RESERVE = 'Средства зарезервированы',
+  DEPOSIT = 'Внесен депозит',
+  RETURN_INVEST = 'Инвестирование отменено',
+  RETURN_RESERVE = 'Резерв возвращен',
+  WITHDRAW = 'Средства выведены',
+  DECLINE_OFFER = 'Предложение отклонено',
+  APPROVE_OFFER = 'Предложение одобрено',
+  DECLINE_ID = 'Идентификация отклонена',
+  APPROVE_ID = 'Идентификация одобрена',
+  INVOKE_OFFER = 'Предложение опубликовано',
+  REVOKE_BEFORE = 'Предложение отозвано досрочно',
+  REVOKE_AFTER = 'Предложение отозвано',
+  GUARANTEE_PAYMENT = 'Верификационный платеж',
+  REWARD_PAYMENT = 'Выплата вознаграждения',
+}

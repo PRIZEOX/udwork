@@ -1,0 +1,68 @@
+import { OperationType } from '../enums/operation.type';
+
+export const messageSeed = [
+  {
+    sum: 0,
+    type: OperationType.APPROVE_ID,
+    // lender: User,
+    // investor: User,
+    // approver: User,
+    // offer: Offer,
+  },
+  {
+    sum: 0,
+    type: OperationType.APPROVE_OFFER,
+    // lender: User,
+    // investor: User,
+    // approver: User,
+    // offer: Offer,
+  },
+  {
+    sum: 1000000,
+    type: OperationType.DEPOSIT,
+    // lender: User,
+    // investor: User,
+    // approver: User,
+    // offer: Offer,
+  },
+  {
+    sum: 0,
+    type: OperationType.INVOKE_OFFER,
+    // lender: User,
+    // investor: User,
+    // approver: User,
+    // offer: Offer,
+  },
+  {
+    sum: 0,
+    type: OperationType.REVOKE_AFTER,
+    // lender: User,
+    // investor: User,
+    // approver: User,
+    // offer: Offer,
+  },
+  {
+    sum: 3000,
+    type: OperationType.REWARD_PAYMENT,
+    // lender: User,
+    // investor: User,
+    // approver: User,
+    // offer: Offer,
+  },
+  {
+    sum: 499,
+    type: OperationType.GUARANTEE_PAYMENT,
+    // lender: User,
+    // investor: User,
+    // approver: User,
+    // offer: Offer,
+  },
+  {
+    sum: 100000,
+    type: OperationType.RESERVE,
+    // lender: User,
+    // investor: User,
+    // approver: User,
+    // offer: Offer,
+  },
+];
