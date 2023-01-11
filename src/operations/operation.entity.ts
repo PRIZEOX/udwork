@@ -31,8 +31,8 @@ export class Operation {
   @Column({
     type: 'enum',
     enum: OperationType,
-    charset: 'utf8mb4',
-    collation: 'utf8mb4_unicode_ci',
+    // charset: 'utf8mb4',
+    // collation: 'utf8mb4_unicode_ci',
   })
   type?: OperationType;
   @ApiProperty({ type: () => User })

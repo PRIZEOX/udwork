@@ -36,7 +36,7 @@ export class MessageService extends TypeOrmCrudService<Message> {
     });
   }
   public async send(topic, text, user: User) {
-    await this.mailerService.sendMessage(topic, text, user);
+    // await this.mailerService.sendMessage(topic, text, user);
     return await this.messagesRepository.save({
       topic,
       text,

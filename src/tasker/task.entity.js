@@ -24,8 +24,8 @@ var Task = /** @class */ (function () {
         (0, typeorm_1.Column)({
             type: 'enum',
             "enum": task_type_1.TaskType,
-            charset: 'utf8mb4',
-            collation: 'utf8mb4_unicode_ci'
+            // charset: 'utf8mb4',
+            // collation: 'utf8mb4_unicode_ci'
         })
     ], Task.prototype, "type");
     __decorate([

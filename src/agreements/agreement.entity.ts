@@ -42,8 +42,8 @@ export class Agreement {
   @Column({
     type: 'enum',
     enum: AgreementType,
-    charset: 'utf8mb4',
-    collation: 'utf8mb4_unicode_ci',
+    // charset: 'utf8mb4',
+    // collation: 'utf8mb4_unicode_ci',
   })
   type: AgreementType;
   @ApiProperty({ type: () => User })

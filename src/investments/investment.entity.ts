@@ -34,8 +34,8 @@ export class Investment {
     type: 'enum',
     enum: InvestmentStatus,
     default: InvestmentStatus.RESERVED,
-    charset: 'utf8mb4',
-    collation: 'utf8mb4_unicode_ci',
+    // charset: 'utf8mb4',
+    // collation: 'utf8mb4_unicode_ci',
   })
   status?: InvestmentStatus;
   @ApiProperty({ type: () => User })

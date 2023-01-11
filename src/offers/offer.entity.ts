@@ -124,16 +124,16 @@ export class Offer {
     type: 'enum',
     enum: OfferStatus,
     default: OfferStatus.DRAFT,
-    charset: 'utf8mb4',
-    collation: 'utf8mb4_unicode_ci',
+    // charset: 'utf8mb4',
+    // collation: 'utf8mb4_unicode_ci',
   })
   status: OfferStatus;
   @ApiProperty()
   @Column({
     type: 'enum',
     enum: RepayPeriod,
-    charset: 'utf8mb4',
-    collation: 'utf8mb4_unicode_ci',
+    // charset: 'utf8mb4',
+    // collation: 'utf8mb4_unicode_ci',
   })
   repayPeriod: RepayPeriod;
   @ApiProperty()

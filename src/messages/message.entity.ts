@@ -24,8 +24,8 @@ export class Message {
     type: 'enum',
     enum: MessageStatus,
     default: MessageStatus.UNREAD,
-    charset: 'utf8mb4',
-    collation: 'utf8mb4_unicode_ci',
+    // charset: 'utf8mb4',
+    // collation: 'utf8mb4_unicode_ci',
   })
   status?: MessageStatus;
   @ApiProperty({ type: () => User })

@@ -22,8 +22,9 @@ import { InvestmentStatus } from '../enums/investment.status';
 import { Investment } from '../investments/investment.entity';
 import { MailerService } from '../mailer/mailer.service';
 import moment from 'moment';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 import SMSru from 'sms_ru';
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+
 const logger = new Logger('UsersService');
 @Injectable()
 export class UsersService extends TypeOrmCrudService<User> {
@@ -116,15 +117,13 @@ export class UsersService extends TypeOrmCrudService<User> {
     await this.usersRepository.save(usersSeed);
   }
   public async findByUuid(uuid: number): Promise<User | undefined> {
-    const entityManager = getManager();
-    return await entityManager
-      .getRepository(User)
+    const entityManager =  this.usersRepository
       .createQueryBuilder('user')
       .where('user.uuid = :uuid', { uuid })
       .leftJoinAndSelect(
         'user.messages',
         'message',
-        // `message.status = '${MessageStatus.UNREAD}'`,
+        // message.status = '${MessageStatus.UNREAD}',
       )
       .orderBy('message.createdAt', 'DESC')
       .leftJoinAndSelect('user.pictures', 'picture')
@@ -132,7 +131,25 @@ export class UsersService extends TypeOrmCrudService<User> {
       .leftJoinAndSelect('user.investorAgreements', 'investorAgreement')
       .leftJoinAndSelect('user.registryEntries', 'registryEntry')
       .getOne();
+    return await entityManager;
   }
+  //   const entityManager = getManager();
+  //   return await entityManager
+  //     .getRepository(User)
+  //     .createQueryBuilder('user')
+  //     .where('user.uuid = :uuid', { uuid })
+  //     .leftJoinAndSelect(
+  //       'user.messages',
+  //       'message',
+  //       // `message.status = '${MessageStatus.UNREAD}'`,
+  //     )
+  //     .orderBy('message.createdAt', 'DESC')
+  //     .leftJoinAndSelect('user.pictures', 'picture')
+  //     .leftJoinAndSelect('user.lenderAgreements', 'lenderAgreement')
+  //     .leftJoinAndSelect('user.investorAgreements', 'investorAgreement')
+  //     .leftJoinAndSelect('user.registryEntries', 'registryEntry')
+  //     .getOne();
+  // }
   public async changeCreds({
     phone,
     password,

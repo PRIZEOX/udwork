@@ -115,7 +115,7 @@ export class MailerService {
   public async sendAccountCreated(email): Promise<void> {
     const info = await this.transporter.sendMail({
       from: this.configService.get('SMTP_SENDER'),
-      to: [this.configService.get('SUPPORT_EMAIL'), 'Gagarinanv68@mail.ru'],
+      to: [this.configService.get('SUPPORT_EMAIL')],
       subject: `Запрос на идентификацию ${email}`,
       html: `
       <p>

@@ -122,24 +122,24 @@ export class User {
   @Column({
     type: 'enum',
     enum: Role,
-    charset: 'utf8mb4',
-    collation: 'utf8mb4_unicode_ci',
+    // charset: 'utf8mb4',
+    // collation: 'utf8mb4_unicode_ci',
   })
   role?: Role;
   @ApiProperty()
   @Column({
     type: 'enum',
     enum: UserStatus,
-    charset: 'utf8mb4',
-    collation: 'utf8mb4_unicode_ci',
+    // charset: 'utf8mb4',
+    // collation: 'utf8mb4_unicode_ci',
   })
   status?: UserStatus;
   @ApiProperty()
   @Column({
     type: 'enum',
     enum: UserType,
-    charset: 'utf8mb4',
-    collation: 'utf8mb4_unicode_ci',
+    // charset: 'utf8mb4',
+    // collation: 'utf8mb4_unicode_ci',
   })
   type?: UserType;
   @ApiProperty()
