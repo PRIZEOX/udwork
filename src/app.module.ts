@@ -20,9 +20,11 @@ import { RavenInterceptor, RavenModule } from 'nest-raven';
 import { APP_INTERCEPTOR } from '@nestjs/core';
 import { ScheduleModule } from '@nestjs/schedule';
 import { TaskerModule } from './tasker/tasker.module';
+import { PrilsModule } from './prils/prils.module';
 @Module({
   imports: [
     RavenModule,
+    PrilsModule,
     ScheduleModule.forRoot(),
     TaskerModule,
     InvestmentModule,

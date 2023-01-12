@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Controller, Get, UseGuards } from '@nestjs/common';
 import { AgreementsService } from './agreements.service';
 import {
@@ -56,7 +57,7 @@ import { JwtGuard } from '../auth/guards/jwt.guard';
     get: AgreementDto,
   },
 })
-@UseGuards(JwtGuard)
+//@UseGuards(JwtGuard)
 @Controller('/api/v1/agreements')
 export class AgreementController implements CrudController<Agreement> {
   constructor(public service: AgreementsService) {}
